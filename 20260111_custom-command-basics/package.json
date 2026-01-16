@@ -1,0 +1,11 @@
+{
+  "name": "custom-command-demo",
+  "version": "1.0.0",
+  "description": "カスタムコマンド基本デモ",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

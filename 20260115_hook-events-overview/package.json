@@ -1,0 +1,16 @@
+{
+  "name": "hook-events-overview",
+  "version": "1.0.0",
+  "description": "Claude Code Hooks の練習用プロジェクト",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["claude-code", "hooks", "demo"],
+  "author": "tomada",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}

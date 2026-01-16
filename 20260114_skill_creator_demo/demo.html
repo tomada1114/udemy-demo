@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design 3 Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--md-sys-color-primary)',
+            'on-primary': 'var(--md-sys-color-on-primary)',
+            'primary-container': 'var(--md-sys-color-primary-container)',
+            'on-primary-container': 'var(--md-sys-color-on-primary-container)',
+            secondary: 'var(--md-sys-color-secondary)',
+            'on-secondary': 'var(--md-sys-color-on-secondary)',
+            surface: 'var(--md-sys-color-surface)',
+            'on-surface': 'var(--md-sys-color-on-surface)',
+            'surface-variant': 'var(--md-sys-color-surface-variant)',
+            outline: 'var(--md-sys-color-outline)',
+            error: 'var(--md-sys-color-error)',
+            'on-error': 'var(--md-sys-color-on-error)',
+          },
+          boxShadow: {
+            'md3-1': '0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15)',
+            'md3-2': '0 1px 2px rgba(0,0,0,0.3), 0 2px 6px 2px rgba(0,0,0,0.15)',
+            'md3-3': '0 4px 8px 3px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.3)',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --md-sys-color-primary: #6750A4;
+      --md-sys-color-on-primary: #FFFFFF;
+      --md-sys-color-primary-container: #EADDFF;
+      --md-sys-color-on-primary-container: #21005D;
+      --md-sys-color-secondary: #625B71;
+      --md-sys-color-on-secondary: #FFFFFF;
+      --md-sys-color-surface: #FFFBFE;
+      --md-sys-color-on-surface: #1C1B1F;
+      --md-sys-color-surface-variant: #E7E0EC;
+      --md-sys-color-outline: #79747E;
+      --md-sys-color-error: #B3261E;
+      --md-sys-color-on-error: #FFFFFF;
+    }
+
+    .dark {
+      --md-sys-color-primary: #D0BCFF;
+      --md-sys-color-on-primary: #381E72;
+      --md-sys-color-primary-container: #4F378B;
+      --md-sys-color-on-primary-container: #EADDFF;
+      --md-sys-color-secondary: #CCC2DC;
+      --md-sys-color-on-secondary: #332D41;
+      --md-sys-color-surface: #1C1B1F;
+      --md-sys-color-on-surface: #E6E1E5;
+      --md-sys-color-surface-variant: #49454F;
+      --md-sys-color-outline: #938F99;
+      --md-sys-color-error: #F2B8B5;
+      --md-sys-color-on-error: #601410;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+  <!-- App Bar -->
+  <header class="bg-surface shadow-md3-2 sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-[22px] leading-7 font-medium">Material Design 3</h1>
+      <button
+        onclick="document.documentElement.classList.toggle('dark')"
+        class="p-2 rounded-full hover:bg-on-surface/10 transition-colors"
+        aria-label="テーマ切替"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="text-center mb-12">
+      <h2 class="text-[45px] leading-[52px] font-normal mb-4">ようこそ</h2>
+      <p class="text-[16px] leading-6 text-on-surface/70 max-w-2xl mx-auto">
+        Material Design 3とTailwind CSSで構築されたモダンなUIコンポーネントのデモです。
+      </p>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="mb-12">
+      <h3 class="text-[22px] leading-7 font-medium mb-6">ボタン</h3>
+      <div class="flex flex-wrap gap-4">
+        <!-- Filled Button -->
+        <button class="
+          bg-primary text-on-primary
+          px-6 py-2.5
+          rounded-full
+          font-medium text-sm
+          shadow-md3-1 hover:shadow-md3-2
+          transition-all duration-200 ease-out
+          hover:bg-primary/90
+          focus:outline-none focus:ring-2 focus:ring-primary/50
+          active:scale-[0.98]
+        ">
+          Filled
+        </button>
+
+        <!-- Outlined Button -->
+        <button class="
+          bg-transparent text-primary
+          px-6 py-2.5
+          rounded-full
+          font-medium text-sm
+          border border-outline
+          transition-all duration-200 ease-out
+          hover:bg-primary/10
+          focus:outline-none focus:ring-2 focus:ring-primary/50
+          active:scale-[0.98]
+        ">
+          Outlined
+        </button>
+
+        <!-- Text Button -->
+        <button class="
+          bg-transparent text-primary
+          px-6 py-2.5
+          rounded-full
+          font-medium text-sm
+          transition-all duration-200 ease-out
+          hover:bg-primary/10
+          focus:outline-none focus:ring-2 focus:ring-primary/50
+          active:scale-[0.98]
+        ">
+          Text
+        </button>
+
+        <!-- Tonal Button -->
+        <button class="
+          bg-primary-container text-on-primary-container
+          px-6 py-2.5
+          rounded-full
+          font-medium text-sm
+          transition-all duration-200 ease-out
+          hover:shadow-md3-1
+          focus:outline-none focus:ring-2 focus:ring-primary/50
+          active:scale-[0.98]
+        ">
+          Tonal
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="mb-12">
+      <h3 class="text-[22px] leading-7 font-medium mb-6">カード</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Elevated Card -->
+        <article class="bg-surface rounded-xl shadow-md3-2 overflow-hidden hover:shadow-md3-3 transition-shadow">
+          <div class="h-40 bg-primary-container"></div>
+          <div class="p-4">
+            <h4 class="text-[16px] leading-6 font-medium mb-2">Elevated Card</h4>
+            <p class="text-[14px] leading-5 text-on-surface/70">
+              シャドウで浮き上がったカードスタイルです。
+            </p>
+          </div>
+        </article>
+
+        <!-- Filled Card -->
+        <article class="bg-surface-variant rounded-xl overflow-hidden hover:shadow-md3-1 transition-shadow">
+          <div class="h-40 bg-secondary"></div>
+          <div class="p-4">
+            <h4 class="text-[16px] leading-6 font-medium mb-2">Filled Card</h4>
+            <p class="text-[14px] leading-5 text-on-surface/70">
+              背景色で区別されたカードスタイルです。
+            </p>
+          </div>
+        </article>
+
+        <!-- Outlined Card -->
+        <article class="bg-surface rounded-xl border border-outline overflow-hidden hover:shadow-md3-1 transition-shadow">
+          <div class="h-40 bg-primary/20"></div>
+          <div class="p-4">
+            <h4 class="text-[16px] leading-6 font-medium mb-2">Outlined Card</h4>
+            <p class="text-[14px] leading-5 text-on-surface/70">
+              ボーダーで区切られたカードスタイルです。
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Chips Section -->
+    <section class="mb-12">
+      <h3 class="text-[22px] leading-7 font-medium mb-6">チップ</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-4 py-1.5 rounded-lg bg-surface-variant text-on-surface text-sm font-medium">
+          Assist
+        </span>
+        <span class="px-4 py-1.5 rounded-lg border border-outline text-on-surface text-sm font-medium">
+          Filter
+        </span>
+        <span class="px-4 py-1.5 rounded-lg bg-primary-container text-on-primary-container text-sm font-medium">
+          Selected
+        </span>
+        <span class="px-4 py-1.5 rounded-lg border border-outline text-on-surface text-sm font-medium hover:bg-on-surface/10 cursor-pointer transition-colors">
+          Suggestion
+        </span>
+      </div>
+    </section>
+
+    <!-- Text Field Section -->
+    <section class="mb-12">
+      <h3 class="text-[22px] leading-7 font-medium mb-6">テキストフィールド</h3>
+      <div class="max-w-md space-y-4">
+        <!-- Outlined Text Field -->
+        <div class="relative">
+          <input
+            type="text"
+            id="outlined-input"
+            placeholder=" "
+            class="
+              w-full px-4 py-4
+              bg-transparent
+              border border-outline rounded
+              text-on-surface
+              focus:outline-none focus:border-primary focus:border-2
+              peer
+            "
+          />
+          <label
+            for="outlined-input"
+            class="
+              absolute left-3 top-4
+              text-on-surface/60 text-sm
+              transition-all duration-200
+              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-primary peer-focus:bg-surface peer-focus:px-1
+              peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-surface peer-[:not(:placeholder-shown)]:px-1
+            "
+          >
+            お名前
+          </label>
+        </div>
+
+        <!-- Filled Text Field -->
+        <div class="relative">
+          <input
+            type="email"
+            id="filled-input"
+            placeholder=" "
+            class="
+              w-full px-4 pt-6 pb-2
+              bg-surface-variant
+              border-b-2 border-on-surface/40
+              rounded-t
+              text-on-surface
+              focus:outline-none focus:border-primary focus:bg-surface-variant/80
+              peer
+            "
+          />
+          <label
+            for="filled-input"
+            class="
+              absolute left-4 top-4
+              text-on-surface/60 text-sm
+              transition-all duration-200
+              peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary
+              peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs
+            "
+          >
+            メールアドレス
+          </label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FAB -->
+  <button class="
+    fixed bottom-6 right-6
+    w-14 h-14
+    bg-primary-container text-on-primary-container
+    rounded-2xl
+    shadow-md3-3
+    flex items-center justify-center
+    hover:shadow-md3-3 hover:bg-primary-container/90
+    transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-primary/50
+    active:scale-95
+  ">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+    </svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-surface-variant mt-12 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center text-on-surface/60 text-sm">
+      Material Design 3 + Tailwind CSS Demo
+    </div>
+  </footer>
+</body>
+</html>

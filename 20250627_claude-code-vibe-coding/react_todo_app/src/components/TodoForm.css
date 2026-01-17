@@ -1,0 +1,78 @@
+.todo-form {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.todo-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: var(--surface-hover);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.add-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.add-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 640px) {
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .add-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

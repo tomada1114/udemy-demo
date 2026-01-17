@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Portfolio - インタラクティブポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- キャンバス要素 - パーティクル描画用 -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- コンテンツ オーバーレイ -->
+    <div class="content-overlay">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">Portfolio</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section id="home" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-line">Creative</span>
+                        <span class="title-line">Developer</span>
+                    </h1>
+                    <p class="hero-subtitle">美しいウェブ体験を創造します</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">作品を見る</button>
+                        <button class="btn btn-secondary">お問い合わせ</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <div class="container">
+                    <h2 class="section-title">About</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>フロントエンド開発者として、ユーザーに感動を与えるインタラクティブな体験を創造しています。</p>
+                            <p>最新の技術と創造性を組み合わせ、美しく機能的なウェブアプリケーションを開発します。</p>
+                        </div>
+                        <div class="skills">
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">CSS3</div>
+                            <div class="skill-item">Canvas API</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="section">
+                <div class="container">
+                    <h2 class="section-title">Work</h2>
+                    <div class="work-grid">
+                        <div class="work-item">
+                            <h3>インタラクティブ アニメーション</h3>
+                            <p>マウスの動きに反応する美しいビジュアルエフェクト</p>
+                        </div>
+                        <div class="work-item">
+                            <h3>レスポンシブ ウェブサイト</h3>
+                            <p>全デバイスで最適化された体験を提供</p>
+                        </div>
+                        <div class="work-item">
+                            <h3>パフォーマンス最適化</h3>
+                            <p>高速で滑らかなユーザーエクスペリエンス</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-content">
+                        <p>プロジェクトについてお気軽にお問い合わせください。</p>
+                        <a href="mailto:contact@example.com" class="contact-email">contact@example.com</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "highlight-memo-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension to save text and images as memos from web pages",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write src/**/*.{js,html,css}",
+    "format:check": "prettier --check src/**/*.{js,html,css}"
+  },
+  "devDependencies": {
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^16.0.0",
+    "prettier": "^3.4.2"
+  }
+}

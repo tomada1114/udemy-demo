@@ -8,4 +8,4 @@
 |----------|------|-------------|
 | `/fix-issue` | Issue を修正 | `$ARGUMENTS` |
 | `/search-error` | エラーを調査 | `$ARGUMENTS` |
-| `/compare` | ファイル比較 | `$1, $2` |
+| `/compare` | ファイル比較 | `$0, $1` |
